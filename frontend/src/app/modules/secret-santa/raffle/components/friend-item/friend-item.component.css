@@ -1,0 +1,106 @@
+.friend-container {
+  flex: 1;
+}
+
+.friend-container ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+@media (max-width: 650px) {
+  .friend-container ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+li.friend-item {
+  background: #FFF;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  padding: 20px;
+  animation: moveInFromRight 1s ease-out;
+}
+
+li.friend-item header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li.friend-item header img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+li.friend-item header .user-info {
+  margin-left: 10px;
+}
+
+.user-info strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-info span {
+  font-size: 13px;
+  color: #999;
+  margin-top: 2px;
+}
+
+li.friend-item p {
+  color: #666;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+li .btn-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+li .btn-danger {
+  background-color: #C94033;
+  font-size: 15px;
+  border: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #FFF;
+  border-radius: 2px;
+}
+
+li .btn-danger:hover {
+  background-color: #bf6259;
+}
+
+li .btn-dark {
+  background-color: #312f2f;
+  font-size: 15px;
+  border: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #FFF;
+  border-radius: 2px;
+}

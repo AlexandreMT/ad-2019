@@ -1,0 +1,34 @@
+<form [formGroup]="friendForm">
+  <div class="input-block">
+    <label for="name">Nome do amigo</label>
+    <input
+      formControlName="name"
+      type="text"
+      id="name"
+      placeholder="Qual o nome do seu amigo?">
+  </div>
+
+  <div class="input-block">
+    <label for="email">E-mail do amigo</label>
+    <input
+      formControlName="email"
+      type="email"
+      id="email"
+      placeholder="Qual o e-mail do seu amigo?">
+  </div>
+
+  <button
+    class="submit"
+    (click)="postFriend()"
+    [disabled]="friendForm.invalid">
+    Salvar
+  </button>
+
+  <button
+    *ngIf="postAction === 'update'"
+    class="cancel"
+    (click)="reset()"
+    [disabled]="friendForm.invalid">
+    Cancelar
+  </button>
+</form>

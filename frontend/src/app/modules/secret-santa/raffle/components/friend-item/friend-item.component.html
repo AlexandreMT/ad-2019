@@ -1,0 +1,29 @@
+<div class="friend-container">
+  <ul>
+    <li class="friend-item" *ngFor="let friend of friends">
+      <header>
+        <img src="https://www.pinclipart.com/picdir/big/133-1331433_free-user-avatar-icons-happy-flat-design-png.png"/>
+        <div class="user-info">
+          <strong>{{ friend?.name }}</strong>
+          <span>{{ friend?.email }}</span>
+        </div>
+      </header>
+      <p>
+        {{ friend?.name }} irá receber no e-mail <strong>{{ friend?.email }}</strong>
+        a informação de quem é o amigo secreto dele.
+      </p>
+      <div class="btn-group">
+        <button
+          (click)="deleteFriend(friend?._id)"
+          class="btn-danger">
+          Remover
+        </button>
+        <button
+          (click)="updateFriend(friend?._id)"
+          class="btn-dark">
+          Editar
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
