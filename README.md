@@ -1,6 +1,8 @@
 # AD-2019 - ADIRETO
 Aplicação de sorteio de amigo secreto
 
+Hospedada em: https://ad-2019.netlify.com/
+
 ## Executando o back-end
 
 1. Navegue até a pasta `backend` através do comando `cd backend`
